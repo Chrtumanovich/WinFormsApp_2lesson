@@ -30,18 +30,20 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lstNames = new System.Windows.Forms.ListBox();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(10, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Names";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lstNames
             // 
@@ -56,13 +58,6 @@
             this.lstNames.Size = new System.Drawing.Size(120, 84);
             this.lstNames.TabIndex = 1;
             // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(138, 26);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 27);
-            this.txtName.TabIndex = 2;
-            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(138, 55);
@@ -73,11 +68,26 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(138, 26);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 27);
+            this.txtName.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(138, 84);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 27);
+            this.textBox1.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(250, 133);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lstNames);
@@ -95,5 +105,6 @@
         private ListBox lstNames;
         private Button btnAdd;
         private TextBox txtName;
+        private TextBox textBox1;
     }
 }
